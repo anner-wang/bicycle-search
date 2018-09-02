@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 配置处理器映射器 -->
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean>
+	<!-- 配置处理器适配器 -->
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+        <!-- 该适配器默认加载以下4类转换器-->
+        	<list>
+           		 <bean class="org.springframework.http.converter.BufferedImageHttpMessageConverter" />
+           		 <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter" />
+           		 <bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter" />
+          		  <bean class="org.springframework.http.converter.xml.XmlAwareFormHttpMessageConverter" />
+          		  <bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+         		   <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+         <property name="supportedMediaTypes">
+              <list>
+                        <value>application/json;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean><!--这里配置了json转换器支持的媒体类型-->
+        </list>
+    	</property>
+	</bean>
+	<!-- 配置视图解析器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		
+	</bean>
+	<!-- 补充上传文件的配置 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 默认编码 -->
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!-- 上传文件大小限制为31M，31*1024*1024 -->
+        <property name="maxUploadSize" value="32505856"/>
+        <!-- 内存中的最大值 -->
+        <property name="maxInMemorySize" value="4096"/>
+    </bean>
+	<!-- 补充控制器实例 -->
+	<bean class="com.creation.controller.ReceiveController"></bean>
+	<!-- 登录验证的控制器 -->
+	<bean class="com.creation.controller.LoginController"></bean>
+	<!-- 地图的控制器实例 -->
+	<bean class="com.creation.controller.MapController"></bean>
+	<!-- 数据分析界面的控制器实例 -->
+	<bean class="com.creation.controller.DataController"></bean>
+	<bean class="com.creation.controller.ImageController"></bean>
+	<bean class="com.creation.controller.ThermalMapController"></bean>
+</beans>

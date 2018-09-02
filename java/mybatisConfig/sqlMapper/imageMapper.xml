@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="image">
+	<insert id="add" parameterType="com.creation.model.Image">
+		insert into image (name,time,longitude,latitude,fileName,number,ps) value (#{name},#{time},#{longitude},#{latitude},#{fileName},#{number},#{ps})
+	</insert>
+	<select id="find" parameterType="String" resultType="com.creation.model.Image">
+		select * from image where name=#{name}
+	</select>
+	<!-- 查找当天的数据 -->
+	<select id="get" parameterType="String" resultType="com.creation.model.Image">
+		select * from image where time like concat(concat('%',#{time}),'%')
+	</select>
+	<!-- 获取全部的数据 -->
+	<select id="all" resultType="com.creation.model.Image">
+		select * from image 
+	</select>
+	<!-- 根据图片名称获取信息 -->
+	<select id="fileName" parameterType="String" resultType="com.creation.model.Image">
+		select * from image where fileName =#{fileName}
+	</select>
+	<!-- 修改数据库信息 -->
+	<update id="change" parameterType="com.creation.model.Image" >
+		update image set  number=#{number} where fileName=#{fileName}
+	</update>
+</mapper>
