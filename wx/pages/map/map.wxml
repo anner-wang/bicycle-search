@@ -1,0 +1,21 @@
+<!--pages/map/map.wxml-->
+<view class="main">
+   <view class="mainView">
+   <map
+        id="myMap"
+        class="mainView"
+        style="width: 100%; height: 475px;"
+        latitude='{{latitude}}'
+        longitude='{{longitude}}'
+        scale="16"
+        show-location
+        > </map>
+   </view>
+  <view class="photobutton" bindtap='camera'>
+  <image
+        class="photobutton"
+        src="/images/Camera.png"
+        style='width:80px;height:80px;'
+  >  </image>
+  </view>
+</view>

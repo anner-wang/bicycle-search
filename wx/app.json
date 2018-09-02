@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/map/map",
+    "pages/camera/camera",
+    "pages/photo/photo",
+    "pages/history/history"
+  ],
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "共享单车识别数据接收平台",
+    "navigationBarTextStyle":"black"
+  }
+}

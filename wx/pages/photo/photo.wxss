@@ -1,0 +1,22 @@
+/* pages/photo/photo.wxss */
+
+.ps{
+  top:500px;
+  height: 150px;
+  width:99%;
+  border: solid 1px black;
+}
+.info{
+  font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+
+}
+.uploadbtn{
+  padding: 5px 30%;
+
+}
+
+.uploadtext{
+  padding: 0px 35%;
+}
+

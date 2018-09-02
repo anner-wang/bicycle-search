@@ -1,0 +1,16 @@
+<!--pages/history/history.wxml-->
+<view class='mainView'>
+  <view class='title'>
+  <text> 查看我的上传记录 </text>
+  </view>
+
+<view wx:for="{{information}}" wx:for-item="information" wx:key="information">
+  
+    
+      <text decode='true'>{{index+1}}.&nbsp; {{information}}  </text>
+    
+  
+</view>
+
+</view>
+

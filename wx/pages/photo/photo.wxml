@@ -1,0 +1,33 @@
+<!--pages/photo/photo.wxml-->
+
+<view class="mainView">
+  <view class="show">
+  <image
+    src='{{src}}'
+    class="show"
+    style='width:100%;height:475px'
+  ></image>
+  </view>
+  <view class="info">
+    <text>拍摄位置({{lo}},{{la}}) \n </text>
+    <text>拍摄者{{nickname}} \n </text>
+  </view>
+    <view class="ps">
+      <textarea 
+        placeholder='本次上传的备注信息（选填）' 
+        maxlength='50' 
+        auto-height='false'
+        show-confirm-bar='false' 
+        adjust-position="true" 
+        bindblur='ps'
+        
+      ></textarea>
+    </view>
+    <view class="uploadbtn" bindtap='upload'>
+      <image
+        class="uploadbtn"
+        src="/images/upload.png"
+        style='width:80px;height:80px'
+      > </image>
+    </view>
+</view>

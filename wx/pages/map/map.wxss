@@ -1,0 +1,6 @@
+/* pages/map/map.wxss */
+
+
+.photobutton{
+  margin:10px 30%;
+}

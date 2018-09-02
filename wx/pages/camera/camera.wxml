@@ -1,0 +1,24 @@
+<!--pages/camera/camera.wxml-->
+
+<view class="page-body">
+  <view class="page-body-wrapper">
+  
+    <camera 
+      device-position="back" 
+      flash="off" 
+      binderror="error" 
+      style="width: 100%; height: 475px;"
+      ></camera>
+
+  </view>
+
+  <view class="camerabutton" bindtap='takephoto'>
+      <image
+        class="camerabutton"
+        src="/images/Camera.png"
+        style='width:80px;height:80px'
+      > </image>
+      
+  </view>
+
+</view>

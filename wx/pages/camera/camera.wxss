@@ -1,0 +1,5 @@
+/* pages/camera/camera.wxss */
+
+.camerabutton{
+  padding: 10px 30%;
+}
