@@ -1,14 +1,10 @@
-## 项目介绍
-本项目以微信小程序为前端采集信息，使用java后台处理信息，使用ssd算法识别单车数量信息，最后通过页面的形式展现数据  
-实现采集校园内共享单车的动态地图停放数据   
+## introduction
 
-## 后台--springboot
+This project collects pictures with the app as the front end (provides the function of monitoring video to selectively extract pictures), uses java background processing information, uses computer vision algorithm to process pictures, and finally displays the image processing effect through web page form, and monitors the information in the video. Visualize statistics and display.
 
-## 前端--微信小程序+网页
+## Data collection - app
 
-## 图像识别 
+## Data transfer and processing - springboot
 
-## 进度安排
-* 2-23  后台与网页ajax请求，博客记录，两个md文件补充
-* 2-24  主项目md文件细做，上传服务器jar包
-* 下周  前端页面和小程序页面优化，后台代码优化
+## Data display - web page
+
